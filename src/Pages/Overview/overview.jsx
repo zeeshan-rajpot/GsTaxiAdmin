@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import Sidebar from "../Components/Sidebar/Sidebar";
+import Sidebar from "../../Components/Sidebar/Sidebar";
 // import LineChart from "./LineChart";
 // import DonutChart from "./DonutChart";
 // import "./overview.css";

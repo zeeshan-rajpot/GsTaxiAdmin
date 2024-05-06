@@ -13,7 +13,8 @@ export default {
     extend: {
       colors: {
         login: "#313339",
-        lightBlue: "#3D9BD6"
+        lightBlue: "#3D9BD6",
+        trueGray:"#AAACAE"
       },
     },
   },
