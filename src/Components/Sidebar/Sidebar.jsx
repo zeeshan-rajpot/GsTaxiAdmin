@@ -4,9 +4,14 @@ import "./sidebar.css";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
+  };
+
+  const toggleDropDown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   return (
@@ -61,96 +66,96 @@ const Sidebar = () => {
         <div className="h-screen md:h-[98vh] px-3 py-4  overflow-y-auto bg-sidebar md:m-3 md:rounded-3xl">
           <div className="flex justify-center items-center mb-4">
             <img
-              src="sideLogo.svg"
-              alt="sidebar_logo"
+              src="loginIcon.svg"
+              alt="loginIcon_logo"
               className="w-24 md:28 xl:w-48 2xl:w-56  "
             />
           </div>
           <ul className="space-y-3 font-medium">
             <li>
               <NavLink to="/overview" className="flex items-center ">
-                <span className="mr-3">
-                  <img src="dotIcon.svg" alt="dot_Icon" className="hidden" />
-                </span>
                 <img
-                  src="overviewIcon.svg"
+                  src="ic_round-dashboard.svg"
                   alt="overview_Icon"
                   className="w-8"
                 />
-                <span className="ms-3 text-white font-normal ">Overview</span>
+                <span className="ms-3 text-trueGray text-xl lg:text-xl font-normal ">
+                  Overview
+                </span>
               </NavLink>
             </li>
             <li>
               <NavLink to="/users" className="flex items-center ">
-                <span className="mr-3">
-                  <img src="dotIcon.svg" alt="dot_Icon" className="hidden" />
-                </span>
                 <img src="userIcon.svg" alt="user_Icon" className="w-8" />
-                <span className="ms-3 text-white ">Users</span>
+                <span className="ms-3 ">Users</span>
               </NavLink>
             </li>
             <li>
-              <NavLink to="/videos" className="flex items-center">
-                <span className="mr-3">
-                  <img src="dotIcon.svg" alt="dot_Icon" className="hidden" />
+              <button
+                type="button"
+                className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group"
+                onClick={toggleDropDown}
+              >
+                <span className="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">
+                  Driver
                 </span>
-                <img src="videoIcon.svg" alt="Video_Icon" className="w-8" />
-                <span className="ms-3 text-white ">Videos</span>
-              </NavLink>
+                <svg
+                  className={`w-3 h-3 transform transition-transform ${
+                    isDropdownOpen ? "rotate-180" : ""
+                  }`}
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>z
+              {isOpen && (
+                <ul className="py-2 space-y-2">
+                  <li>
+                    <Link
+                      to="/approve"
+                      className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group "
+                    >
+                      Approve
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/pending"
+                      className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group "
+                    >
+                      Pending
+                    </Link>
+                  </li>
+                </ul>
+              )}
             </li>
+
             <li>
-              <NavLink to="/withdawl" className="flex items-center ">
-                <span className="mr-3">
-                  <img src="dotIcon.svg" alt="dot_Icon" className="hidden" />
-                </span>
-                <img src="moneyIcon.svg" alt="money_Icon" className="w-8" />
-                <span className="ms-3 text-white ">Withdraw Request</span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/passwordChange" className="flex items-center ">
+              <NavLink to="/rates" className="flex items-center ">
                 <span className="mr-3">
                   <img src="dotIcon.svg" alt="dot_Icon" className="hidden" />
                 </span>
                 <img src="lockIcon.svg" alt="lock_Icon" className="w-8" />
-                <span className="ms-3 text-white ">Change Password</span>
+                <span className="ms-3  ">Ride Rates</span>
               </NavLink>
             </li>
             <li>
-              <NavLink to="/reported" className="flex items-center ">
+              <NavLink to="/restaurants" className="flex items-center ">
                 <span className="mr-3">
                   <img src="dotIcon.svg" alt="dot_Icon" className="hidden" />
                 </span>
                 <img src="reportIcon.svg" alt="report_Icon" className="w-8" />
-                <span className="ms-3 text-white ">Reported video</span>
+                <span className="ms-3  ">Notification</span>
               </NavLink>
-            </li>
-            <li>
-              <NavLink to="/conditions" className="flex items-center ">
-                <span className="mr-3">
-                  <img src="dotIcon.svg" alt="dot_Icon" className="hidden" />
-                </span>
-                <img src="termsIcon.svg" alt="Terms_Icon" className="w-8" />
-                <span className="ms-3 text-white ">Terms & Conditions</span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/policy" className="flex items-center ">
-                <span className="mr-3">
-                  <img src="dotIcon.svg" alt="dot_Icon" className="hidden" />
-                </span>
-                <img src="privacyIcon.svg" alt="Policy_Icon" className="w-8" />
-                <span className="ms-3 text-white ">Privacy Policy</span>
-              </NavLink>
-            </li>
-            <li>
-              <Link to="/" className="flex items-center ">
-                <span className="mr-3">
-                  <img src="dotIcon.svg" alt="dot_Icon" className="hidden" />
-                </span>
-                <img src="logoutIcon.svg" alt="logout_Icon" className="w-8" />
-                <span className="ms-3 text-white ">Logout</span>
-              </Link>
             </li>
           </ul>
         </div>
