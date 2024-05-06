@@ -1,7 +1,13 @@
-.active {
-    
-  }
-  
-  .active img.hidden {
-    display: block;
-  }
+.active-tabbbb {
+  color: #fff !important;
+  background-color: #c54fe8 !important;
+  width: 100%;
+}
+
+.active-tabbbb img {
+  filter: brightness(0) invert(1);
+}
+
+.active img.hidden {
+  display: block;
+}
