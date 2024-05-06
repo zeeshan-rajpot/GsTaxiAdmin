@@ -68,26 +68,41 @@ const Sidebar = () => {
             <img
               src="loginIcon.svg"
               alt="loginIcon_logo"
-              className="w-24 md:28 xl:w-48 2xl:w-56  "
+              className="w-32 md:w-40"
             />
           </div>
-          <ul className="space-y-3 font-medium">
+          <ul className="space-y-3 font-medium flex flex-col  ">
             <li>
-              <NavLink to="/overview" className="flex items-center ">
+              <NavLink
+                to="/overview"
+                className={`flex items-center justify-center ${
+                  activeTab === "overview" ? "active-tabbbb" : ""
+                }`}
+                onClick={() => handleTabClick("overview")}
+              >
                 <img
                   src="ic_round-dashboard.svg"
                   alt="overview_Icon"
                   className="w-8"
                 />
-                <span className="ms-3 text-trueGray text-xl lg:text-xl font-normal ">
+                <span className="ms-3 text-trueGray text-xl lg:text-xl font-normal justify-center">
                   Overview
                 </span>
               </NavLink>
             </li>
             <li>
-              <NavLink to="/users" className="flex items-center ">
-                <img src="userIcon.svg" alt="user_Icon" className="w-8" />
-                <span className="ms-3 ">Users</span>
+              <NavLink
+                to="/users"
+                className="pl-8 flex items-center mx-2 rounded-xl py-2 px-1"
+              >
+                <img
+                  src="solar_user-bold.svg"
+                  alt="user_Icon"
+                  className="w-8"
+                />
+                <span className="ms-3 text-trueGray text-xl lg:text-xl font-normal justify-center ">
+                  Users
+                </span>
               </NavLink>
             </li>
             <li>
@@ -103,7 +118,6 @@ const Sidebar = () => {
                   className={`w-3 h-3 transform transition-transform ${
                     isDropdownOpen ? "rotate-180" : ""
                   }`}
-                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 10 6"
@@ -116,7 +130,8 @@ const Sidebar = () => {
                     d="m1 1 4 4 4-4"
                   />
                 </svg>
-              </button>z
+              </button>
+              z
               {isOpen && (
                 <ul className="py-2 space-y-2">
                   <li>
@@ -138,7 +153,6 @@ const Sidebar = () => {
                 </ul>
               )}
             </li>
-
             <li>
               <NavLink to="/rates" className="flex items-center ">
                 <span className="mr-3">
