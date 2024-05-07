@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "../../Components/Sidebar/Sidebar";
+import Searchbar from "../../Components/Searchbar";
 
 const Users = () => {
   const [openDropdownIndex, setOpenDropdownIndex] = useState(-1);
@@ -55,14 +56,21 @@ const Users = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-10 ">
       <div className="col-span-2 lg:col-span-2  ">
-        <Sidebar />
+        <Sidebar actTab="user" />
       </div>
-      <div className="col-span-8 lg:col-span-8 bg-[#F2FAFF]">
-        <div className="col-span-2"></div>
-        <div className=" mt-1 lg:mt-8 mx-4 ">
-          <h1 className="text-[#2A3037] font-semibold text-3xl lg:text-5xl">
-            Users
-          </h1>
+      <div className="col-span-8 lg:col-span-8 bg-[#F2FAFF] h-screen">
+        <div className="flex justify-between mt-1 lg:mt-8 w-[95%] m-auto">
+          <div>
+            <Searchbar />
+          </div>
+          <div className="flex space-x-3">
+            <img src="notification.svg" alt="norification_icon" />
+            <img src="person.svg" alt="person_icon" />
+          </div>
+        </div>
+        <hr className="mt-2 w-[95%] m-auto" />
+        <div className="w-[95%] m-auto">
+          <h1 className="text-2xl md:text-4xl	mt-6 mb-2 font-semibold">Users</h1>
         </div>
         <section className=" p-3 sm:p-5">
           <div className="mx-auto max-w-screen-xl">

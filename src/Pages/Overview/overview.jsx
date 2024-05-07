@@ -14,6 +14,8 @@ const OverView = () => {
 
   return (
     <>
+   
+    
       <div className="grid grid-cols-1 lg:grid-cols-10">
         <div className="col-span-2 lg:col-span-2  ">
           <Sidebar
@@ -37,7 +39,7 @@ const OverView = () => {
             <div className="mt-0 md:mt-2 mx-2">
              <CoulmnChart/>
             </div>
-            <div className="mb-2 mx-2">
+            <div className="mt-0 md:mt-2 mx-2">
               <DonutChart />
             </div>
           </div>
