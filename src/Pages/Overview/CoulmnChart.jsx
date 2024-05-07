@@ -13,7 +13,7 @@ const CoulmnChart = () => {
       plotOptions: {
         bar: {
           horizontal: false,
-          columnWidth: "70%",
+          columnWidth: "55%",
           colors: {
             backgroundBarColors: ["#EBEBEB"],
             backgroundBarOpacity: 1,

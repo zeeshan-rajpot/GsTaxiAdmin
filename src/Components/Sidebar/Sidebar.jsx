@@ -196,7 +196,7 @@ const Sidebar = (props) => {
               >
                 <img src="Capa_1.svg" alt="coin_Icon" className="w-8 ms-4" />
                 <span className="ms-3 text-xl lg:text-xl font-normal ">
-                Restaurant 
+                  Restaurant
                 </span>
               </Link>
             </li>

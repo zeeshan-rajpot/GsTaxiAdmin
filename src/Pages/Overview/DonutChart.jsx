@@ -1,5 +1,6 @@
 import React from "react";
 import Chart from "react-apexcharts";
+import "./donutchart.css";
 
 const DonutChart = () => {
   const chartData = {
@@ -33,7 +34,7 @@ const DonutChart = () => {
           },
         },
       },
-      labels: ["Rides: 244", "Food: 200", "Parcel: 200"], // Include values along with labels
+      labels: ["Rides", "Food", "Parcel"],
       legend: {
         show: true,
         position: "bottom",
@@ -64,15 +65,35 @@ const DonutChart = () => {
 
   return (
     <div className="donut-chart bg-white rounded-2xl p-4 ">
-      <h1 className="text-[#1F1F1F] text-xl font-semibold">
+      <h1 className="text-[#1F1F1F] text-xl font-semibold flex justify-center mb-2">
         Total Rides today
       </h1>
       <Chart
         options={chartData.options}
         series={chartData.series}
         type="donut"
-        height={350}
+        height={260}
       />
+      <div className="flex justify-around p-5">
+        <div className="space-y-3">
+          {chartData.options.labels.map((label, index) => (
+            <div key={index}>
+              <span
+                className="w-2 h-2 inline-block mr-2 rounded-3xl"
+                style={{ backgroundColor: chartData.options.colors[index] }}
+              ></span>
+              <span>{label}</span>
+            </div>
+          ))}
+        </div>
+        <div className="space-y-3 ">
+          {chartData.series.map((series, index) => (
+            <div key={index} className="ml-10">
+              {series}
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
