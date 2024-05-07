@@ -35,7 +35,7 @@ const OverView = () => {
             <div className="mt-0 md:mt-2 mx-2">
              <CoulmnChart/>
             </div>
-            <div className="mb-2 mx-2">
+            <div className="mt-0 md:mt-2 mx-2">
               <DonutChart />
             </div>
           </div>
