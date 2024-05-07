@@ -16,7 +16,9 @@ const OverView = () => {
     <>
       <div className="grid grid-cols-1 lg:grid-cols-10">
         <div className="col-span-2 lg:col-span-2  ">
-          <Sidebar />
+          <Sidebar
+          actTab='overview'
+           />
         </div>
         <div className="col-span-8 lg:col-span-8 bg-[#F2FAFF] h-screen">
           <div className="flex justify-between mt-1 lg:mt-8 w-[95%] m-auto">
