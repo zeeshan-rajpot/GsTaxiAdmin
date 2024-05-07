@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import "./sidebar.css";
 
 const Sidebar = () => {
+  const [activeTab, setActiveTab] = useState('overview');
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
