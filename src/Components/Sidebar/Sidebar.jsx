@@ -27,8 +27,8 @@ const Sidebar = (props) => {
       <div className="flex items-center justify-between ">
         <div className="flex lg:hidden">
           <img
-            src="/gstaxi.svg"
-            className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 w-[70px] "
+            src="/loginIcon.svg"
+            className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 w-[94px] "
           />
           <img
             src="/Group 1171274935.svg"
