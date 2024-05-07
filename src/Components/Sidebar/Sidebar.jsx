@@ -2,8 +2,8 @@ import { React, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./sidebar.css";
 
-const Sidebar = () => {
-  const [activeTab, setActiveTab] = useState("overview");
+const Sidebar = (props) => {
+  const [activeTab, setActiveTab] = useState(props.actTab);
   const [isOpen, setIsOpen] = useState(false);
   const [isbtnOpen, setIsbtnOpen] = useState(false);
 
@@ -93,7 +93,7 @@ const Sidebar = () => {
                 className={`flex items-center  py-1 rounded-2xl  ${
                   activeTab === "overview" ? "active-tabbbb" : "text-trueGray"
                 }`}
-                onClick={() => handleTabClick("Overview")}
+                onClick={() => handleTabClick("overview")}
               >
                 <img
                   src="ic_round-dashboard.svg"
