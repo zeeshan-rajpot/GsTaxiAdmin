@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import "./sidebar.css";
 
 const Sidebar = () => {
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState("overview");
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -73,10 +73,10 @@ const Sidebar = () => {
             />
           </div>
           <ul className="space-y-3 font-medium flex flex-col  ">
-            <li>
+            <li className="mx-6">
               <NavLink
                 to="/overview"
-                className={`flex items-center justify-center ${
+                className={`flex items-center justify-center py-1 rounded-2xl text-trueGray ${
                   activeTab === "overview" ? "active-tabbbb" : ""
                 }`}
                 onClick={() => handleTabClick("overview")}
@@ -86,7 +86,7 @@ const Sidebar = () => {
                   alt="overview_Icon"
                   className="w-8"
                 />
-                <span className="ms-3 text-trueGray text-xl lg:text-xl font-normal justify-center">
+                <span className="ms-3  text-xl lg:text-xl font-normal justify-center">
                   Overview
                 </span>
               </NavLink>
@@ -94,14 +94,17 @@ const Sidebar = () => {
             <li>
               <NavLink
                 to="/users"
-                className="pl-8 flex items-center mx-2 rounded-xl py-2 px-1"
+                className={`flex items-center justify-center py-1 rounded-2xl text-trueGray ${
+                  activeTab === "overview" ? "active-tabbbb" : ""
+                }`}
+                onClick={() => handleTabClick("users")}
               >
                 <img
                   src="solar_user-bold.svg"
                   alt="user_Icon"
                   className="w-8"
                 />
-                <span className="ms-3 text-trueGray text-xl lg:text-xl font-normal justify-center ">
+                <span className="ms-3  text-xl lg:text-xl font-normal justify-center ">
                   Users
                 </span>
               </NavLink>
