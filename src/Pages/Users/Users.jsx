@@ -54,6 +54,7 @@ const Users = () => {
     // Add more data objects as needed
   ];
   return (
+    <>
     <div className="grid grid-cols-1 lg:grid-cols-10 ">
       <div className="col-span-2 lg:col-span-2  ">
         <Sidebar actTab="user" />
@@ -256,6 +257,7 @@ const Users = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };
 

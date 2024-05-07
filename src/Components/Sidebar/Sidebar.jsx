@@ -27,8 +27,8 @@ const Sidebar = (props) => {
       <div className="flex items-center justify-between ">
         <div className="flex lg:hidden">
           <img
-            src="/iArab_is_the_goto_platform_for_Arab_content_cre 1 1.svg"
-            className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 w-[54px] "
+            src="/gstaxi.svg"
+            className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 w-[70px] "
           />
           <img
             src="/Group 1171274935.svg"
@@ -196,7 +196,7 @@ const Sidebar = (props) => {
               >
                 <img src="Capa_1.svg" alt="coin_Icon" className="w-8 ms-4" />
                 <span className="ms-3 text-xl lg:text-xl font-normal ">
-                Restaurant 
+                  Restaurant
                 </span>
               </Link>
             </li>
